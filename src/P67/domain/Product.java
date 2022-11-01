@@ -1,4 +1,4 @@
-package P6.domain;
+package P67.domain;
 
 import org.hibernate.annotations.GenericGenerator;
 

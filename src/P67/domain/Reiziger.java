@@ -18,10 +18,10 @@ public class Reiziger {
     private String achternaam;
     private Date geboortedatum;
 
-    @OneToMany(mappedBy = "reiziger")
+    @OneToMany(mappedBy = "reiziger", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OVChipkaart> ovChipkaarts;
 
-    @OneToOne(mappedBy = "reiziger")
+    @OneToOne(mappedBy = "reiziger", cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "adres_id")
     private Adres adres;
 

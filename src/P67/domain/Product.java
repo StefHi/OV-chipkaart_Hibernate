@@ -16,7 +16,7 @@ public class Product {
     private String beschrijving;
     private double prijs;
 
-    @ManyToMany
+    @ManyToMany(cascade = { CascadeType.DETACH, CascadeType.REFRESH })
     @JoinTable (
             name = "ov_chipkaart_product",
             joinColumns = @JoinColumn(name = "product_nummer"),
